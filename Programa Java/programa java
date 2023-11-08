@@ -1,0 +1,146 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+
+public class Conexionmotorshow {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner( System.in );
+
+		int respuesta = scanner.nextInt();
+		
+		
+		if(respuesta == 1) {
+			
+		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from usuario");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                ;
+
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+		
+		}
+		
+		if(respuesta == 3) {
+			
+			try {
+	            Class.forName("com.mysql.cj.jdbc.Driver");
+	            Connection connection = DriverManager.getConnection(
+	                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+	            );
+	            Statement statement = connection.createStatement();
+	            ResultSet resultSet = statement.executeQuery("select * from usuario where tipocoches = 'on'");
+	            while (resultSet.next()) {
+	                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+	                ;
+
+	            }
+	            connection.close();
+	        } catch (Exception e) {
+	            System.out.println(e);
+	        }
+			
+			
+	    }
+	if(respuesta == 2) {
+		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from usuario where tipocoches = 'on' or caracmotor = 'on' or clasicos = 'on' or nuevoslanzamientos = 'on' ");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                ;
+
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+		
+		
+    }
+	
+	if(respuesta == 4) {
+		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from usuario where caracmotor = 'on' ");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                ;
+
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+		
+}
+	if(respuesta == 5) {
+		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from usuario where clasicos = 'on' ");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                ;
+
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+		
+}
+	
+	if(respuesta == 6) {
+		try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/motorshow", "root", ""
+            );
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from usuario where nuevoslanzamientos = 'on' ");
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                ;
+
+            }
+            connection.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+		
+}
+	if(respuesta > 6)
+		System.out.println("Por favor, introduzca un número del 1 al 6");
+	
+	if(respuesta < 1)
+		System.out.println("Por favor, introduzca un número del 1 al 6");
+	}
+	
+}
+		
+		
