@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 08:17:46
+-- Tiempo de generación: 08-11-2023 a las 09:30:36
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -109,7 +109,9 @@ INSERT INTO `usuario` (`IDUsuario`, `Nombre`, `Apellido`, `DNI`, `CorreoElectron
 (9, 'donald', 'Trump', '12348675D', 'Trump@gmail.com', '+23456453783', 'No', '3e6a337a0a09e952d84e53ac1fc5209b', 'agree_terms', '', '', 'on', ''),
 (10, 'Mishell', 'Obaman', '12348675Ñ', 'obaman@gmail.com', '+23456453745', 'Si', '7dc9315bffe2aba9b392dbbc8e870d4a', 'agree_terms', 'on', 'on', 'on', 'on'),
 (11, 'Curco', 'Vain', '12348675H', 'vain@gmail.com', '+23456453746', 'No', '454e3994c98523cbcfb7490f3942eeaa', 'agree_terms', 'on', '', '', ''),
-(12, 'Maria', 'Irastotxa', '12348675O', 'irastortxa@gmail.com', '+2345645374', 'Si', '7c137a279dedb5ba232ed4fb9e29e1ed', 'agree_terms', 'on', '', '', 'on');
+(12, 'Lucia', 'Pacheco', '29742591S', 'pacheco@gmail.com', '+3190912894', 'Si', '7540ba6571c76780981a8afdc32304ed', 'agree_terms', '', '', '', ''),
+(13, 'Manolito', 'Lopez', '12783901N', 'nolito@hotmail.com', '+45239935', 'No', '781c2bc0cda7f3818f9157d8ae640058', 'agree_terms', '', 'on', '', ''),
+(14, 'Luis', 'Magallanes', '1289347A', 'mallanes@gmail.com', '+123499213', 'Si', '0055fe931197b7088d03386095e7d692', 'agree_terms', '', 'on', 'on', '');
 
 --
 -- Índices para tablas volcadas
@@ -179,6 +181,12 @@ ALTER TABLE `subasta`
   MODIFY `IDSubastas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `IDUsuario` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -192,8 +200,8 @@ ALTER TABLE `coches`
 -- Filtros para la tabla `conferencia`
 --
 ALTER TABLE `conferencia`
-  ADD CONSTRAINT `conferencia_ibfk_1` FOREIGN KEY (`IDUsuario`) REFERENCES `usuario` (`IDUsuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `conferencia_ibfk_2` FOREIGN KEY (`IDCoches`) REFERENCES `coches` (`IDCoches`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `conferencia_ibfk_2` FOREIGN KEY (`IDCoches`) REFERENCES `coches` (`IDCoches`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `conferencia_ibfk_3` FOREIGN KEY (`IDUsuario`) REFERENCES `usuario` (`IDUsuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `presentador`
