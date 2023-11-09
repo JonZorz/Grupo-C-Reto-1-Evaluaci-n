@@ -63,28 +63,23 @@ h1, u {
     right: 0;
     max-width: 500px;
     padding: 20px;
+    grid-column: 2/4;
+    grid-row:3/4;
+     
 }
-.cupon{
-    float:left;
-     display: flex;
-left:-700px;
-  justify-content: center;
-    align-items: center;
-    position: absolute;
-        top: 860px; 
-}
-.martin img{
-    position: absolute;
- display: flex;
-  justify-content: center;
-     align-items: center;
-     left:501px;
-    top: 278px; 
-     border: 3px solid #1ECC81;
+
+.cupon {
+    padding: 10px;
+    grid-column: 1 / 2;
+    grid-row: 4/5;
+    display: flex;
+     transform: translate(-185%, -140%);
+
 }
 
 table,th,td{
        border: 2px solid black;
+       display: block;
 }
 th {
     background-color: #1ECC81;
@@ -145,8 +140,7 @@ h2{
         <form name="formulario" method="get" action="http://192.168.1.18/insert.php" onsubmit="return validarFormulario()">
             <input type="hidden" name="db" value ="motorshow">
             <input type="hidden" name="table" value ="usuario">
-            <b>IDUsuario</b>
-            <input type="int" name="IDUsuario"><br><br>
+            <input type="hidden" name="IDUsuario">
             <b>DNI:</b>
             <input type="text" name="DNI"><br><br>
             <b>Tu Nombre:</b>
@@ -194,11 +188,6 @@ h2{
      <input type="submit" value="Enviar" style="width: 90px; height: 40px;">
         </form>
 
-
-
-
-
- 
 
   <div class="noticias">
 <table>
@@ -255,9 +244,7 @@ h2{
 
 
   </div>
-<div class="martin">
-<img src="nano.jpeg" width="300px" height="590px">
-</div>
+
 
 </body>
 </html>
