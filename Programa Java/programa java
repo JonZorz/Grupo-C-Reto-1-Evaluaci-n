@@ -44,7 +44,7 @@ public class Conexionmotorshow {
 	            Statement statement = connection.createStatement();
 	            ResultSet resultSet = statement.executeQuery("select * from usuario where tipocoches = 'on'");
 	            while (resultSet.next()) {
-	                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+	                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +  resultSet.getString(3) + " DNI: " + resultSet.getString(4)+ " Email: " + resultSet.getString(5)+ " Numero de Teléfono :" + resultSet.getString(6)+ " Socio:  " + resultSet.getString(7)+ " Contraseña: " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ " " + resultSet.getString(13)+ "\n");
 	                ;
 
 	            }
@@ -64,7 +64,7 @@ public class Conexionmotorshow {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from usuario where tipocoches = 'on' or caracmotor = 'on' or clasicos = 'on' or nuevoslanzamientos = 'on' ");
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +  resultSet.getString(3) + " DNI: " + resultSet.getString(4)+ " Email: " + resultSet.getString(5)+ " Numero de Teléfono :" + resultSet.getString(6)+ " Socio:  " + resultSet.getString(7)+ " Contraseña: " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ " " + resultSet.getString(13)+ "\n");
                 ;
 
             }
@@ -85,7 +85,7 @@ public class Conexionmotorshow {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from usuario where caracmotor = 'on' ");
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +  resultSet.getString(3) + " DNI: " + resultSet.getString(4)+ " Email: " + resultSet.getString(5)+ " Numero de Teléfono :" + resultSet.getString(6)+ " Socio:  " + resultSet.getString(7)+ " Contraseña: " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ " " + resultSet.getString(13)+ "\n");
                 ;
 
             }
@@ -104,7 +104,7 @@ public class Conexionmotorshow {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from usuario where clasicos = 'on' ");
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +  resultSet.getString(3) + " DNI: " + resultSet.getString(4)+ " Email: " + resultSet.getString(5)+ " Numero de Teléfono :" + resultSet.getString(6)+ " Socio:  " + resultSet.getString(7)+ " Contraseña: " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ " " + resultSet.getString(13)+ "\n");
                 ;
 
             }
@@ -124,7 +124,7 @@ public class Conexionmotorshow {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from usuario where nuevoslanzamientos = 'on' ");
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " DNI: " + resultSet.getString(3)+ " Email: " + resultSet.getString(4)+ " Numero de Teléfono :" + resultSet.getString(5)+ " Socio:  " + resultSet.getString(6)+ " Contraseña: " + resultSet.getString(7)+ " " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ "\n");
+                System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +  resultSet.getString(3) + " DNI: " + resultSet.getString(4)+ " Email: " + resultSet.getString(5)+ " Numero de Teléfono :" + resultSet.getString(6)+ " Socio:  " + resultSet.getString(7)+ " Contraseña: " + resultSet.getString(8)+ " " + resultSet.getString(9)+ " " + resultSet.getString(10)+ " " + resultSet.getString(11)+ " " + resultSet.getString(12)+ " " + resultSet.getString(13)+ "\n");
                 ;
 
             }
@@ -144,3 +144,4 @@ public class Conexionmotorshow {
 }
 		
 		
+    
